@@ -20,13 +20,20 @@
             padding:0;
            }
 
+           p ,h3,button{
+            font-size: clamp(0.8rem, 1vw, 10rem);
+           }
+
+           h1{
+            font-size: clamp(2rem, 1vw, 10rem);
+           }
           
           .nav_bar{
              
               background-color: transparent;
               width: var(--width);
               padding: 1%;
-              font-size: clamp(1rem, 1vw, 2rem); 
+              font-size: clamp(1rem, 1vw, 10rem); 
               position: absolute;
               top:0;
               z-index: 999;
@@ -42,7 +49,7 @@
               margin-right: auto;
               width: var(--width);
               display: block;
-              opacity: 0.9;
+              opacity: 0.8;
               position: relative;
               aspect-ratio: 3/1;
               
@@ -74,13 +81,16 @@
             width:82%;
             margin-right: auto;
             margin-left: 18%;
-            display: flex;
+           
         
             opacity: 0;
             transition: opacity 2s ease-in-out;
             
            }
 
+           .aboutus_section_flex{
+            display: flex;
+           }
            .aboutus_subsec{
               width:30%;
            }
@@ -97,9 +107,8 @@
 
            .menu{
             margin-top: var(--margin_top);
-            margin-left:18%;
-            margin-right:auto;
-            border:3px solid var(--color);
+           
+           border:3px solid var(--color);
             width:60%;
             padding:2%;
             box-shadow: 0 4px 8px 0 rgba(62, 27, 4, 1), 0 6px 20px 0 rgba(62, 27, 4, 1);
@@ -192,10 +201,10 @@
            <a href=#home>Home</a>
         </nav>
 
-        <img class="image_main" src="food_3.jpg">
+        <img class="image_main" src="food_main.jpg">
 
         
-        <div class="aboutus_section">
+        <div class="aboutus_section aboutus_section_flex">
         <div class="aboutus_subsec">
           <h1 class="color">
              About us
@@ -211,9 +220,9 @@
 
       <img class= "image_menu" src="food_2.jpg" >
             
-            <div  class="menu">
+            <div  class="menu aboutus_section">
             
-               <h1 class="color">Menu</h1>
+               <h1 class="color ">Menu</h1>
 
             </br>
                <button class="eat-color button" onclick="eat_function()">Eat</button>
@@ -325,8 +334,8 @@
    <img class="image_menu" src="food_14.jpg" >
 </div>
 
-<div class="menu">
-  <h1>Contact Us</h1>
+<div class="menu aboutus_section">
+  <h1 >Contact Us</h1>
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias libero aliquam atque explicabo harum cupiditate suscipit omnis facere. Repudiandae dicta consectetur minus eaque fugit, neque rerum adipisci mollitia placeat laudantium?</p>
    <p>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis aliquam beatae, eligendi vel eveniet dolorem temporibus, ex modi adipisci molestias obcaecati dolore laboriosam? Quasi adipisci corrupti libero inventore quibusdam fugiat!
@@ -338,7 +347,7 @@
        <script>
             const navbar= document.querySelector(".nav_bar");
             const imagemain= document.querySelector(".image_main");
-            const aboutussection= document.querySelector(".aboutus_section");
+            const aboutussection= document.querySelectorAll(".aboutus_section");
 
             const image_options={
               threshold:0.2
@@ -364,7 +373,7 @@
           image_main_observer.observe(imagemain);
 
           const aboutus_options={
-            threshold:0.5
+            threshold:0.1
           };
 
           const aboutus_observer= new IntersectionObserver(
@@ -384,8 +393,11 @@
             
            , aboutus_options);
 
-           
-            aboutus_observer.observe(aboutussection);
+           aboutussection.forEach(section=>{
+               
+                 aboutus_observer.observe(section);
+           })
+              
            
          
 
