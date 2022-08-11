@@ -9,7 +9,7 @@
               }
           
           :root{
-           --margin_top:2%;
+           --margin_top:5%;
            --color:#3e1b04;
            --width:100%;
           }
@@ -73,7 +73,7 @@
             margin-right: auto;
             margin-left: 18%;
             display: flex;
-            margin-top: 5%;
+        
             opacity: 0;
             transition: opacity 2s ease-in-out;
             
@@ -87,6 +87,12 @@
             opacity: 1;
            }
 
+           .aboutus_image{
+            width:40%;
+            margin-left: 8%;
+
+           }
+
            .menu{
             margin-top: var(--margin_top);
             margin-left:18%;
@@ -95,7 +101,15 @@
             width:60%;
             padding:2%;
             box-shadow: 0 4px 8px 0 rgba(62, 27, 4, 1), 0 6px 20px 0 rgba(62, 27, 4, 1);
-;
+
+           }
+
+           .image_menu{
+            width:65%;
+            margin-top:var(--margin_top) ; 
+            margin-right:auto;
+            margin-left: auto; 
+            display: block;
            }
 
            .color{
@@ -117,7 +131,45 @@
             color:white;
            }
 
+           
+
           
+           @media  screen and (max-width:768px) {
+              .aboutus_section{
+                width:100%;
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+
+                
+              }
+
+              .aboutus_image{
+                 display: none;
+
+              }
+
+              .aboutus_subsec{
+                width:90%;
+                margin-left: auto;
+                margin-right:auto;
+              
+              }
+
+              .image_menu{
+                width: 100%;
+              }
+
+              .menu{
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 1%;
+                overflow: hidden;
+              }
+
+
+           }
 
           
       </style>
@@ -142,18 +194,15 @@
              About us
           </h1>
           <br>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore quod dolorem harum repellendus dignissimos dicta, officiis id accusamus tenetur dolorum, magnam adipisci? Voluptatem atque laboriosam earum eveniet quisquam sed optio!
+          <p >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.Dolore quod dolorem harum repellendus dignissimos dicta, officiis id accusamus tenetur dolorum, magnam adipisci? Voluptatem atque laboriosam earum eveniet quisquam sed optio!
           </p>
         </div>
-        <img src="food_6.jpg" style="width:40%; margin-left:8% ">
+        <img class="aboutus_image" src="food_6.jpg" >
       </div>
         
 
-      
-     
-
-            <img src="food_2.jpg" style="width:65%; margin-top:2% ; margin-right:auto; margin-left: auto; display: block;">
+      <img class= "image_menu" src="food_2.jpg" >
             
             <div  class="menu">
             
@@ -178,7 +227,7 @@
               <h3 class="color">
                 Honey Almond Granola with Fruits
               </h3>
-              <p class="color">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+              <p class="color">Natural cereal of honey toasted oats, raisins,<br> almonds and dates 7.00</p>
            </div>
             
            <br>
@@ -266,7 +315,7 @@
 </div>
 
 <div>
-   <img src="food_14.jpg" style="width:65%; display:block; margin-left:auto;margin-right: auto; margin-top:2%">
+   <img class="image_menu" src="food_14.jpg" >
 </div>
 
 <div class="menu">
