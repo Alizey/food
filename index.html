@@ -44,6 +44,8 @@
               display: block;
               opacity: 0.9;
               position: relative;
+              aspect-ratio: 3/1;
+              
              
               
           }
@@ -110,6 +112,7 @@
             margin-right:auto;
             margin-left: auto; 
             display: block;
+            
            }
 
            .color{
@@ -168,6 +171,10 @@
                 overflow: hidden;
               }
 
+              .image_main{
+                aspect-ratio: 3/2;
+              }
+
 
            }
 
@@ -185,7 +192,7 @@
            <a href=#home>Home</a>
         </nav>
 
-        <img class="image_main" src="food_3.jpg">
+        <img class="image_main" src="food_main.jpg">
 
         
         <div class="aboutus_section">
@@ -334,7 +341,7 @@
             const aboutussection= document.querySelector(".aboutus_section");
 
             const image_options={
-              rootMargin: "-450px 0px 0px 0px",
+              threshold:0.2
             };
             const image_main_observer= new IntersectionObserver(function(entries, image_main_observer){
                    
