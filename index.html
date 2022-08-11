@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
           @font-face {
              font-family: Binance PLEX;      /*In this case I have downloaded Binance Plex font */
@@ -9,6 +10,8 @@
           
           :root{
            --margin_top:2%;
+           --color:#3e1b04;
+           --width:100%;
           }
 
           *{
@@ -21,7 +24,7 @@
           .nav_bar{
              
               background-color: transparent;
-              width: 100%;
+              width: var(--width);
               padding: 1%;
               font-size: clamp(1rem, 1vw, 2rem); 
               position: absolute;
@@ -37,7 +40,7 @@
           .image_main{
               margin-left: auto;
               margin-right: auto;
-              width: 100%;
+              width: var(--width);
               display: block;
               opacity: 0.9;
               position: relative;
@@ -58,22 +61,17 @@
               color:#fe0000;
            }
 
-           .heading{
-            
-            text-align: center;
-            
-           }
-
+         
            .onscroll_navbar{
             position:fixed;
-            background-color:#3e1b04;
+            background-color:var(--color);
            }
 
            .aboutus_section{
             margin-top: var(--margin_top);
-            width:80%;
+            width:82%;
             margin-right: auto;
-            margin-left: 20%;
+            margin-left: 18%;
             display: flex;
             margin-top: 5%;
             opacity: 0;
@@ -90,18 +88,18 @@
            }
 
            .menu{
-            margin-top: 2%;
-            margin-left:20%;
+            margin-top: var(--margin_top);
+            margin-left:18%;
             margin-right:auto;
-            border:3px solid #3e1b04;
-            width:58%;
+            border:3px solid var(--color);
+            width:60%;
             padding:2%;
             box-shadow: 0 4px 8px 0 rgba(62, 27, 4, 1), 0 6px 20px 0 rgba(62, 27, 4, 1);
 ;
            }
 
            .color{
-            color:#3e1b04;
+            color:var(--color);
            }
 
            .drink-menu{
@@ -109,15 +107,17 @@
            }
            
            .button{
-            padding:1% 2%;
+            padding:1% 10%;
+            cursor: pointer;
+            border-color:var(--color);
            }
 
            .eat-color{
-            background-color:green;
+            background-color:var(--color);
+            color:white;
            }
-           .eat-color .drink-color{
-                 color:red;
-           }
+
+          
 
           
       </style>
@@ -155,16 +155,19 @@
 
             <img src="food_2.jpg" style="width:65%; margin-top:2% ; margin-right:auto; margin-left: auto; display: block;">
             
-            <div  class="menu ">
+            <div  class="menu">
             
                <h1 class="color">Menu</h1>
 
+            </br>
                <button class="eat-color button" onclick="eat_function()">Eat</button>
                <button class="drink-color button" onclick="drink_function()">Drink</button>
               
+         
                <div class="eat-menu">
                 
                 <div>
+                  <br>
                 <h3 class="color">
                   Bread Basket
                 </h3>
@@ -208,11 +211,13 @@
 
     <div class="drink-menu">
       <div>
+        <br>
         <h3 class="color">
           Coffee
         </h3>
         <p class="color">Regular coffee 2.50</p>
      </div>
+     <br>
 
      <div>
       <h3 class="color">
@@ -221,6 +226,8 @@
       <p class="color">Chocolate espresso with milk 4.50</p>
    </div>
 
+   <br>
+
    <div>
     <h3 class="color">
       Correto
@@ -228,6 +235,7 @@
     <p class="color">Whiskey and coffee 5.00</p>
  </div>
 
+ <br>
 
  <div>
   <h3 class="color">
@@ -236,6 +244,8 @@
   <p class="color">Hot tea, except not hot 3.00</p>
 </div>
 
+<br>
+
 <div>
   <h3 class="color">
     Soda
@@ -243,42 +253,36 @@
   <p class="color">Coke, Sprite, Fanta, etc. 2.50</p>
 </div>
 
-
-
-
-    
-    
-    
-    </div>
+<br>
+</div>
 </div>
 
 
+<div class="contactus">
+      
 
+</div>
 
+</div>
 
-          </div>
+<div>
+   <img src="food_14.jpg" style="width:65%; display:block; margin-left:auto;margin-right: auto; margin-top:2%">
+</div>
 
+<div class="menu">
+  <h1>Contact Us</h1>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias libero aliquam atque explicabo harum cupiditate suscipit omnis facere. Repudiandae dicta consectetur minus eaque fugit, neque rerum adipisci mollitia placeat laudantium?</p>
+   <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis aliquam beatae, eligendi vel eveniet dolorem temporibus, ex modi adipisci molestias obcaecati dolore laboriosam? Quasi adipisci corrupti libero inventore quibusdam fugiat!
+   </p>
 
+</div>
           
       
-      <!--<div class="aboutus_section">
-        <img src="food_4.jpg" style="width: 40%">
-        <div class="aboutus_subsec">
-          <h1 style="color:#3e1b04">
-             About us
-          </h1>
-          <br>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non temporibus mollitia, suscipit in beatae corrupti inventore consequuntur praesentium voluptatem! Sit odio delectus quas perspiciatis aspernatur beatae iste corporis eveniet quo!
-          </p>
-      </div>-->
-
-        
-
        <script>
             const navbar= document.querySelector(".nav_bar");
             const imagemain= document.querySelector(".image_main");
-            const aboutussection= document.querySelectorAll(".aboutus_section");
+            const aboutussection= document.querySelector(".aboutus_section");
 
             const image_options={
               rootMargin: "-450px 0px 0px 0px",
@@ -304,7 +308,7 @@
           image_main_observer.observe(imagemain);
 
           const aboutus_options={
-            threshold: 0.5
+            threshold:0.5
           };
 
           const aboutus_observer= new IntersectionObserver(
@@ -322,26 +326,46 @@
             
             
             
-           , image_options);
+           , aboutus_options);
 
-           aboutussection.forEach(section =>{
-            aboutus_observer.observe(section);
-           })
+           
+            aboutus_observer.observe(aboutussection);
+           
          
 
            function eat_function(){
               const eat= document.querySelector(".eat-menu");
               const drink=document.querySelector(".drink-menu");
+              const eat_color=document.querySelector(".eat-color");
+              const drink_color=document.querySelector(".drink-color");
               eat.style.display="block";
               drink.style.display="none";
+              
+              eat_color.style.backgroundColor="#3e1b04";
+              drink_color.style.backgroundColor="#D3D3D3";
+
+              eat_color.style.color="white";
+              drink_color.style.color="black";
+              
+
            }
 
 
            function drink_function(){
             const drink=document.querySelector(".drink-menu");
             const eat= document.querySelector(".eat-menu");
-            drink.style.display="block";
+
+            const eat_color=document.querySelector(".eat-color");
+              const drink_color=document.querySelector(".drink-color");
+           
+              drink.style.display="block";
             eat.style.display="none";
+
+            eat_color.style.backgroundColor="#D3D3D3";
+              drink_color.style.backgroundColor="#3e1b04";
+
+              eat_color.style.color="black";
+              drink_color.style.color="white";
             
           } 
 
