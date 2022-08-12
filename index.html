@@ -144,6 +144,37 @@
            }
 
            
+           .icon_image{
+            width:clamp(20px, 40px, 80px);
+           }
+
+           .icon_text{
+            display: flex;
+           }
+
+           .contactus{
+                   margin-left:2%;
+                   width: 50%;
+                   padding:2%;
+                   
+                   margin-top:2%;
+                   border-color: #d3d3d3;
+                  }
+
+                  .shop{
+                       background-color: #d3d3d3;
+                       color: black;
+                       padding:12px 30px;
+                       font-size:18px;
+                       width: 20%;
+                  }
+
+                  .shop:hover{
+                     background-color: var(--color);
+                     color:white;
+                     cursor: pointer;
+                     }
+
 
           
            @media  screen and (max-width:768px) {
@@ -182,6 +213,14 @@
 
               .image_main{
                 aspect-ratio: 4/3;
+              }
+
+              .contactus{
+                width:90%;
+              }
+
+              .shop{
+                width:50%;
               }
 
 
@@ -336,10 +375,22 @@
 
 <div class="menu aboutus_section">
   <h1 >Contact Us</h1>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias libero aliquam atque explicabo harum cupiditate suscipit omnis facere. Repudiandae dicta consectetur minus eaque fugit, neque rerum adipisci mollitia placeat laudantium?</p>
-   <p>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis aliquam beatae, eligendi vel eveniet dolorem temporibus, ex modi adipisci molestias obcaecati dolore laboriosam? Quasi adipisci corrupti libero inventore quibusdam fugiat!
-   </p>
+
+  <form>
+            
+    <form >
+      <input class="contactus" type="text" placeholder="Name" name="name"><br>
+
+      <input  class="contactus"type="text" placeholder="Email" name="email"><br>
+
+      <input class="contactus" type="text" placeholder="Subject" name="subject"><br>
+
+      <input class="contactus" type="text" placeholder="Message" name="message"><br>
+
+      <input  class="shop contactus" type="submit" value="Send">
+     </form>
+</form>
+ 
 
 </div>
           
