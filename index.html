@@ -52,10 +52,7 @@
               opacity: 0.8;
               position: relative;
               aspect-ratio: 3/1;
-              
-             
-              
-          }
+              }
 
          .nav_bar a{
             
@@ -81,10 +78,9 @@
             width:82%;
             margin-right: auto;
             margin-left: 18%;
-           
-        
             opacity: 0;
-            transition: opacity 2s ease-in-out;
+            transform: translateY(50%);
+            transition: opacity 2s ease-in-out ,transform 1.5s ease-in-out;
             
            }
 
@@ -97,6 +93,7 @@
 
            .aboutus_onscroll{
             opacity: 1;
+            transform: translateY(-10%);
            }
 
            .aboutus_image{
@@ -201,6 +198,7 @@
 
               .image_menu{
                 width: 100%;
+                margin-top: var(--margin_top);
               }
 
               .menu{
@@ -253,11 +251,11 @@
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.Dolore quod dolorem harum repellendus dignissimos dicta, officiis id accusamus tenetur dolorum, magnam adipisci? Voluptatem atque laboriosam earum eveniet quisquam sed optio!
           </p>
         </div>
-        <img class="aboutus_image" src="food_6.jpg" >
+        <img class="aboutus_image " src="food_6.jpg" >
       </div>
         
 
-      <img class= "image_menu" src="food_2.jpg" >
+      <img class= " aboutus_section image_menu" src="food_2.jpg" >
             
             <div  class="menu aboutus_section">
             
@@ -362,15 +360,15 @@
 </div>
 
 
-<div class="contactus">
+<!--<div class="contactus">
       
 
-</div>
+</div>-->
 
 </div>
 
 <div>
-   <img class="image_menu" src="food_14.jpg" >
+   <img class=" aboutus_section image_menu" src="food_14.jpg" >
 </div>
 
 <div class="menu aboutus_section">
@@ -424,7 +422,7 @@
           image_main_observer.observe(imagemain);
 
           const aboutus_options={
-            threshold:0.1
+               rootMargin: ("-300px 0px 0px 0px")
           };
 
           const aboutus_observer= new IntersectionObserver(
