@@ -80,7 +80,7 @@
             margin-left: 18%;
             opacity: 0;
             transform: translateY(50%);
-            transition: opacity 2s ease-in-out ,transform 1.5s ease-in-out;
+            transition: opacity 2s ease-in-out ,transform 1s ease-in-out;
             
            }
 
@@ -172,6 +172,18 @@
                      cursor: pointer;
                      }
 
+
+          .footer_container{
+                background-color:var(--color) ;
+                padding-top:2%;
+                padding-left:40%;
+                padding-bottom:2%
+                    }
+
+
+          .icons{
+             width:4%;
+               }             
 
           
            @media  screen and (max-width:768px) {
@@ -392,6 +404,10 @@
 
 </div>
           
+
+<footer class="footer_container margin_top" >
+ 
+</footer>
       
        <script>
             const navbar= document.querySelector(".nav_bar");
@@ -422,7 +438,8 @@
           image_main_observer.observe(imagemain);
 
           const aboutus_options={
-               rootMargin: ("-300px 0px 0px 0px")
+               threshold:0.1
+               
           };
 
           const aboutus_observer= new IntersectionObserver(
